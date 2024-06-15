@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+    <link rel="stylesheet" href="/interface/css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>UKB_CLOSETCLOTHING</title>
+</head>
+
+    <body>
+        <div id="app">
+           <div class="container" v-show="action == 'openUI'">
+            <header>
+                <i class="fa-solid fa-shirt"></i>
+                <span>CLOSET</span>
+            </header>
+            <div class="box-main">
+                <div class="box-closet">
+                    <div class="item-closet" v-for="(data,idx) in closet" :key="idx" @click="clothingUse(data)">
+                        <div class="box-img">
+                            <img src="./images/tshirt.png" alt="">
+                        </div>
+                        <span>
+                            {{data?.name}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+           </div>
+        </div>
+    </body>
+
+    <script src="javascript/app.js"></script>
+
+</body>
+
+</html>
